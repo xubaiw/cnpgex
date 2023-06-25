@@ -1,0 +1,59 @@
+@prefix r: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <#> .
+
+:鸦片战争
+  r:type :Milito .
+:太平天国运动 
+  r:type :Revolucio .
+:辛亥革命
+  r:type :Revolucio .
+
+:洋务运动 r:type :Reformo .
+:戊戌维新运动 r:type :Reformo .
+:清末新政
+  r:type :Reformo ;
+  :detalo
+    "设立商部、学部、巡警部等中央行政机构" ,
+    "裁撤绿营，建立新军" ,
+    "颁布商法商律，奖励工商" ,
+    "鼓励留学，开新学制，废科举" .
+
+:南京条约 r:type :Traktato .
+:虎门条约 r:type :Traktato .
+:望厦条约 r:type :Traktato .
+:黄埔条约 r:type :Traktato .
+:马关条约 r:type :Traktato .
+:辛丑条约 r:type :Traktato .
+
+:地理大全 r:type :Publikigo .
+:四洲志 r:type :Publikigo .
+:海国图志 r:type :Publikigo .
+:救亡决论 r:type :Publikigo .
+:天演论 r:type :Publikigo .
+:天朝田亩制度 r:type :Publikigo .
+:资政新篇 r:type :Publikigo .
+
+:关天培 r:type :Persono .
+:陈化成 r:type :Persono .
+:海龄 r:type :Persono .
+:史荣椿 r:type :Persono .
+:乐善 r:type :Persono .
+:邓世昌 r:type :Persono .
+:青木周藏 r:type :Persono .
+:瓦德西 r:type :Persono .
+:威廉二世 r:type :Persono .
+:林则徐 r:type :Persono .
+:魏源 r:type :Persono .
+:严复 r:type :Persono .
+:洪秀全 r:type :Persono .
+:洪仁玕 r:type :Persono .
+:陈玉成 r:type :Persono .
+:李秀成 r:type :Persono .
+:奕讫 r:type :Persono .
+:曾国藩 r:type :Persono .
+:左宗棠 r:type :Persono .
+:张之洞 r:type :Persono .
+:冯贵芬 r:type :Persono .
+:康有为 r:type :Persono .
+:梁启超 r:type :Persono .
+:谭嗣同 r:type :Persono .
