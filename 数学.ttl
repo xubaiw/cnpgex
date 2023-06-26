@@ -1,0 +1,19 @@
+@prefix r: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix s: <./shared.ttl#> .
+@prefix : <#> .
+
+:2022-3-11
+  r:type :H-Ekz ;
+  s:t "`lim_{x->0}({1+e^x}/2)^{cotx}=`?." .
+
+:2022-3-12
+  r:type :H-Ekz ;
+  s:t "`int_0^2{2x-4}/{x^2+2x+4}dx=`?." .
+
+:2022-3-13
+  r:type :H-Ekz ;
+  s:t "已知函数`f(x)=e^{sinx}+e^{-sinx}`，则`f^‴(2pi)=`?." .
+
+:2022-3-15
+  r:type :H-Ekz ;
+  s:t "已知`bbA`为`3`阶矩阵，交换`bbA`的第`2`行和第`3`行，再将第`2`列的`-1`倍加到第`1`列，得到矩阵`[[-2,1,-1],[1,-1,0],[-1,0,0]]`，则`bbA^{-1}`的迹`tr(bbA^{-1})=`?." .
