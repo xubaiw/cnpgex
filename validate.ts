@@ -24,7 +24,7 @@ const main = async () => {
 const getAllUpdates = async function* () {
   for await (const entry of Deno.readDir(".")) {
     const { name: path } = entry;
-    if (path.endsWith(".ru")) {
+    if (path.endsWith(".sparql")) {
       yield path;
     }
   }
