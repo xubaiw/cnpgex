@@ -1,0 +1,7 @@
+PREFIX : <#>
+
+INSERT DATA {
+  GRAPH <#> {
+
+  }
+}
