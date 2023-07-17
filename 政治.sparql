@@ -2,7 +2,7 @@ PREFIX r: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX : <#> 
 
 INSERT DATA {
-  GRAPH <#> {
+  GRAPH <> {
     :鸦片战争
       r:type :Milito .
     :太平天国运动 

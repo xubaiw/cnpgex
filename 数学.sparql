@@ -3,7 +3,7 @@ PREFIX s: <./shared.ttl#>
 PREFIX : <#>
 
 INSERT DATA {
-  GRAPH <#> {
+  GRAPH <> {
 
     :2022-3-11
       r:type :H-Ekz ;
@@ -25,7 +25,7 @@ INSERT DATA {
 } ;
 
 INSERT DATA {
-  GRAPH <#> {
+  GRAPH <> {
     
     :2010-3-1
       r:type :H-Ekz ;
