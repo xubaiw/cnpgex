@@ -5,15 +5,17 @@ import Comunica from "https://esm.sh/@comunica/query-sparql@2.8.1";
 import { resolve } from "https://deno.land/std@0.194.0/path/mod.ts";
 import React from "https://esm.sh/react@18.2.0";
 import { renderToString } from "https://esm.sh/react-dom@18.2.0/server";
+import { ensureDir } from "https://deno.land/std@0.194.0/fs/mod.ts";
+import { fromFileUrl, join } from "https://deno.land/std@0.194.0/path/mod.ts";
 
 /** 程序入口 */
 const main = async () => {
   const [store] = await loadSparql();
-  await serveStore(store);
+  await generatePages(store);
 };
 
 /** 可视化 Store 中的数据 */
-const serveStore = async (store: N3.Store) => {
+const generatePages = async (store: N3.Store) => {
   const quads = [];
   for (const q of store) quads.push(q);
   const html = renderToString(
@@ -45,10 +47,9 @@ const serveStore = async (store: N3.Store) => {
       </body>
     </html>,
   );
-  const server = Deno.serve(() =>
-    new Response(html, { headers: { "Content-Type": "text/html" } })
-  );
-  await server.finished;
+  const pagesDir = fromFileUrl(import.meta.resolve("./pages"));
+  await ensureDir(pagesDir);
+  await Deno.writeTextFile(join(pagesDir, "index.html"), html);
 };
 
 /** 加载 SPARQL */
