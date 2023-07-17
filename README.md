@@ -9,4 +9,4 @@ Knowledge graph for China's National Post-Graduate Extrance Examination.
 
 知识图谱是对知识的结构化整理。但不能一味追求结构化，而是要使知识的形式与复习的目的相适应。在实际制作知识图谱时，需要各科实际情况，实事求是地选择本体模型。
 
-数据格式采用 RDF/Turtle 1.1 格式，同时后续可以使用 Rust/Dioxus 生成页面，可视化进行复习、背诵等。
+数据格式采用 SPARQL 1.2 格式，同时后续可以使用 Deno/React 生成静态页面，可视化进行复习、背诵等。
