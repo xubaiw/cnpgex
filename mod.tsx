@@ -24,26 +24,33 @@ const generatePages = async (store: N3.Store) => {
         <meta charSet="utf-8" />
       </head>
       <body>
-        {quads.map((x) => (
-          <div style={{ border: "solid 1px", padding: "1em" }}>
-            <p>
-              {"s: "}
-              {x.subject.value}
-            </p>
-            <p>
-              {"p: "}
-              {x.predicate.value}
-            </p>
-            <p>
-              {"o: "}
-              {x.object.value}
-            </p>
-            <p>
-              {"g: "}
-              {x.graph.value}
-            </p>
-          </div>
-        ))}
+        <div style={{ display: "flex", flexDirection: "row", margin: "auto" }}>
+          <aside>
+            some text
+          </aside>
+          <main>
+            {quads.map((x) => (
+              <div style={{ border: "solid 1px", padding: "1em" }}>
+                <p>
+                  {"s: "}
+                  {x.subject.value}
+                </p>
+                <p>
+                  {"p: "}
+                  {x.predicate.value}
+                </p>
+                <p>
+                  {"o: "}
+                  {x.object.value}
+                </p>
+                <p>
+                  {"g: "}
+                  {x.graph.value}
+                </p>
+              </div>
+            ))}
+          </main>
+        </div>
       </body>
     </html>,
   );
@@ -70,10 +77,11 @@ const loadSparql = async (): Promise<[N3.Store, Comunica.QueryEngine]> => {
 
 /** 获取目录下所有 SPARQL 文件 */
 const getAllSparql = async function* () {
-  for await (const entry of Deno.readDir(".")) {
+  const dir = fromFileUrl(import.meta.resolve("./"));
+  for await (const entry of Deno.readDir(dir)) {
     const { name: path } = entry;
     if (path.endsWith(".sparql")) {
-      yield path;
+      yield join(dir, path);
     }
   }
 };
