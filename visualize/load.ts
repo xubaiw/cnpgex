@@ -1,10 +1,12 @@
-import N3 from "https://esm.sh/n3@1.17.0";
+import N3 from "npm:n3";
 import Comunica from "https://esm.sh/@comunica/query-sparql@2.8.1";
 import { resolve } from "https://deno.land/std@0.194.0/path/mod.ts";
 import { fromFileUrl, join } from "https://deno.land/std@0.194.0/path/mod.ts";
 
 /** 加载 SPARQL 文件，默认加载所有 */
-export const loadSparql = async (selektoj: string[] = []): Promise<N3.Store> => {
+export const loadSparql = async (
+  selektoj: string[] = [],
+): Promise<N3.Store> => {
   // 初始化
   const engine = new Comunica.QueryEngine();
   const store = new N3.Store();
